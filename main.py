@@ -45,6 +45,14 @@ while game_on:
     if ball.ycor() >= 280 or ball.ycor() <= -280:
         ball.bounce()
 
+    # detect collision with player at right
+    if ball.distance(player_one) < 60 and ball.xcor() > 380:
+        ball.go_back()
+    elif ball.distance(player_two) < 60 and ball.xcor() < -380:
+        ball.go_back()
+
+
+
 
 
 
