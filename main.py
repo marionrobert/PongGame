@@ -41,6 +41,12 @@ while game_on:
     screen.update()
     ball.move()
 
+    # detect collision with the wall
+    if ball.ycor() >= 280 or ball.ycor() <= -280:
+        ball.bounce()
+
+
+
 
 #  the ball --> avance tout le temps
 #    - si tape un bord, renvoyer vers un autre angle maix avance toujours
