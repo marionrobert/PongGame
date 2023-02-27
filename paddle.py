@@ -1,25 +1,11 @@
 from turtle import Turtle
 
-POSITIONS_PLAYER_ONE = [(-410, 0), (-410, 20), (-410, 40)]
-POSITIONS_PLAYER_TWO = [(410, 0), (410, 20), (410, 40)]
 
-
-class Paddle():
-    def __init__(self):
-        self.segments = []
-
-    def create_paddle1(self):
-        for position in POSITIONS_PLAYER_ONE:
-            new_segment = Turtle(shape="square")
-            new_segment.color("white")
-            new_segment.penup()
-            new_segment.goto(position)
-            self.segments.append(new_segment)
-
-    def create_paddle2(self):
-        for position in POSITIONS_PLAYER_TWO:
-            new_segment = Turtle(shape="square")
-            new_segment.color("white")
-            new_segment.penup()
-            new_segment.goto(position)
-            self.segments.append(new_segment)
+class Paddle(Turtle):
+    def __init__(self, x_position, y_position):
+        super(Paddle, self).__init__()
+        self.shape("square")
+        self.color("white")
+        self.shapesize(stretch_wid=5, stretch_len=1)
+        self.penup()
+        self.setposition(x_position, y_position)

@@ -20,14 +20,10 @@ for n in range(15):
     line.forward(20)
     line.penup()
     line.forward(20)
-screen.update()
-
 
 # create players --> player1 and player 2
-player_one = Paddle()
-player_one.create_paddle1()
-player_two = Paddle()
-player_two.create_paddle2()
+player_one = Paddle(410, 0)
+player_two = Paddle(-410, 0)
 screen.update()
 
 #  the ball --> avance tout le temps
