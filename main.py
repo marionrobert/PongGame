@@ -1,6 +1,7 @@
 from turtle import Screen, Turtle
 from paddle import Paddle
 from ball import Ball
+from scoreboard import Scoreboard
 import time
 
 # set up the playground
@@ -27,42 +28,42 @@ for n in range(15):
 player_one = Paddle((410, 0))
 player_two = Paddle((-410, 0))
 ball = Ball()
+scoreboard = Scoreboard()
 screen.update()
 
 screen.listen()
-screen.onkey(fun=player_one.move_up, key="Up")
-screen.onkey(fun=player_one.move_down, key="Down")
-screen.onkey(fun=player_two.move_up, key="z")
-screen.onkey(fun=player_two.move_down, key="q")
+screen.onkeypress(fun=player_one.move_up, key="Up")
+screen.onkeypress(fun=player_one.move_down, key="Down")
+screen.onkeypress(fun=player_two.move_up, key="z")
+screen.onkeypress(fun=player_two.move_down, key="q")
 
 game_on = True
 while game_on:
-    time.sleep(0.1)
+    time.sleep(ball.move_speed)
     screen.update()
     ball.move()
 
     # detect collision with the wall
     if ball.ycor() >= 280 or ball.ycor() <= -280:
-        ball.bounce()
+        ball.bounce_y()
 
-    # detect collision with player at right
-    if ball.distance(player_one) < 60 and ball.xcor() > 380:
-        ball.go_back()
-    elif ball.distance(player_two) < 60 and ball.xcor() < -380:
-        ball.go_back()
+    # detect collision with paddles
+    if ball.distance(player_one) < 60 and ball.xcor() > 380\
+            or ball.distance(player_two) < 60 and ball.xcor() < -380:
+        ball.bounce_x()
 
+    # detect if paddle misses the ball
+    if ball.xcor() > 435:
+        scoreboard.increase_left_score()
+        ball.go_center()
 
+    if ball.xcor() < -435:
+        scoreboard.increase_right_score()
+        ball.go_center()
 
-
-
-
-#  the ball --> avance tout le temps
-#    - si tape un bord, renvoyer vers un autre angle maix avance toujours
-#    - si touche un joueur elle est renvoyée dans le sens inverse (setheading to ??)
-#    - si passe derière la ligne d'un jour, alors le joueur perd un point
-#    - balle remise au centre après un point marqué et reprend sa course
-
-# scoreboard with score for player one and score for player two
-
+    # detect game over
+    if scoreboard.player_left_score == 6 or scoreboard.player_right_score == 6:
+        scoreboard.game_over(6)
+        game_on = False
 
 screen.exitonclick()
