@@ -26,6 +26,16 @@ player_one = Paddle(410, 0)
 player_two = Paddle(-410, 0)
 screen.update()
 
+screen.listen()
+screen.onkey(fun=player_one.move_up, key="Up")
+screen.onkey(fun=player_one.move_down, key="Down")
+screen.onkey(fun=player_two.move_up, key="z")
+screen.onkey(fun=player_two.move_down, key="q")
+
+game_on = True
+while game_on:
+    screen.update()
+
 #  the ball --> avance tout le temps
 #    - si tape un bord, renvoyer vers un autre angle maix avance toujours
 #    - si touche un joueur elle est renvoyée dans le sens inverse (setheading to ??)
