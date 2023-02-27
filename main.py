@@ -1,4 +1,5 @@
 from turtle import Screen, Turtle
+from paddle import Paddle
 
 # set up the playground
 screen = Screen()
@@ -22,9 +23,12 @@ for n in range(15):
 screen.update()
 
 
-# scoreboard with score for player one and score for player two
-
-# player --> player1 and player 2
+# create players --> player1 and player 2
+player_one = Paddle()
+player_one.create_paddle1()
+player_two = Paddle()
+player_two.create_paddle2()
+screen.update()
 
 #  the ball --> avance tout le temps
 #    - si tape un bord, renvoyer vers un autre angle maix avance toujours
@@ -32,6 +36,7 @@ screen.update()
 #    - si passe derière la ligne d'un jour, alors le joueur perd un point
 #    - balle remise au centre après un point marqué et reprend sa course
 
+# scoreboard with score for player one and score for player two
 
 
 screen.exitonclick()
