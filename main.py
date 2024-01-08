@@ -24,18 +24,18 @@ for n in range(15):
     line.penup()
     line.forward(20)
 
-# create players --> player1 and player 2
-player_one = Paddle((410, 0))
-player_two = Paddle((-410, 0))
+# create players --> player_right and player_left
+player_right = Paddle((410, 0))
+player_left = Paddle((-410, 0))
 ball = Ball()
 scoreboard = Scoreboard()
 screen.update()
 
 screen.listen()
-screen.onkeypress(fun=player_one.move_up, key="Up")
-screen.onkeypress(fun=player_one.move_down, key="Down")
-screen.onkeypress(fun=player_two.move_up, key="z")
-screen.onkeypress(fun=player_two.move_down, key="q")
+screen.onkeypress(fun=player_right.move_up, key="Up")
+screen.onkeypress(fun=player_right.move_down, key="Down")
+screen.onkeypress(fun=player_left .move_up, key="z")
+screen.onkeypress(fun=player_left .move_down, key="q")
 
 game_on = True
 while game_on:
@@ -48,8 +48,8 @@ while game_on:
         ball.bounce_y()
 
     # detect collision with paddles
-    if ball.distance(player_one) < 60 and ball.xcor() > 380\
-            or ball.distance(player_two) < 60 and ball.xcor() < -380:
+    if ball.distance(player_right) < 60 and ball.xcor() > 380\
+            or ball.distance(player_left ) < 60 and ball.xcor() < -380:
         ball.bounce_x()
 
     # detect if paddle misses the ball
