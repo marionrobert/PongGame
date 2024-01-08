@@ -31,5 +31,4 @@ Le score gagnant est initialisé à 6 mais vous pouvez modifer cette variable (w
 <img src="/assets/screenshot_ponggame.png" />
 
 <h2>Remarques</h2>
-Assurez-vous d'avoir Python installé sur votre machine pour exécuter le jeu.
-Ce projet est une version simple du jeu Pong et peut être amélioré avec des fonctionnalités supplémentaires, des graphismes, etc.
+Projet réalisé dans le cadre du cours <a href="https://www.udemy.com/course/100-days-of-code/">100 Days of Code: The Complete Python Pro Bootcamp</a> de Angela Yu sur la plateform Udemy.
