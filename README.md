@@ -16,11 +16,16 @@ Fichiers inclus :
 <h2>Comment jouer ?</h2>
 Exécutez le fichier main.py pour démarrer le jeu.
 Les joueurs contrôlent les raquettes avec les touches suivantes :
-Joueur 1 (droite) : Flèches haut et bas.
-Joueur 2 (gauche) : Touches "z" et "q".
-Vous avez la possibilité de modifier les touches de commande en modifiant les lignes suivantes : 
+<ul>
+  <li>Joueur 1 (droite) : Flèches haut et bas.</li>
+  <li>Joueur 2 (gauche) : Touches "z" et "q".</li>
+</ul>
+
+Vous pouvez modifier les touches de commande en modifiant les lignes suivantes : 
 <img src="/assets/screenshot_code.png" />
-Le jeu se poursuit jusqu'à ce qu'un joueur atteigne un score de 6, moment où le jeu se termine et affiche le vainqueur.
+
+Le jeu se poursuit jusqu'à ce qu'un joueur atteigne le score gagnant, moment où le jeu se termine et affiche le vainqueur.
+Le score gagnant est initialisé à 6 mais vous pouvez modifer cette variable (winning_score).
 
 <h2>Apperçu de l'interface</h2>
 <img src="/assets/screenshot_ponggame.png" />
