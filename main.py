@@ -4,6 +4,8 @@ from ball import Ball
 from scoreboard import Scoreboard
 import time
 
+winning_score = 6
+
 # set up the playground
 screen = Screen()
 screen.setup(width=900, height=600)
@@ -62,8 +64,8 @@ while game_on:
         ball.go_center()
 
     # detect game over
-    if scoreboard.player_left_score == 6 or scoreboard.player_right_score == 6:
-        scoreboard.game_over(6)
+    if scoreboard.player_left_score == winning_score or scoreboard.player_right_score == winning_score:
+        scoreboard.game_over(winning_score)
         game_on = False
 
 screen.exitonclick()
