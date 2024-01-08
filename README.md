@@ -21,8 +21,7 @@ Joueur 2 (gauche) : Touches "z" et "q".
 Le jeu se poursuit jusqu'à ce qu'un joueur atteigne un score de 6, moment où le jeu se termine et affiche le vainqueur.
 
 <h2>Apperçu de l'interface</h2>
-![image](https://github.com/marionrobert/PongGame/assets/107509668/2b5fbb41-13ec-44ed-9b52-5ec88bd4f79d)
-
+<img src="/screenshot_ponggame.png" />
 
 <h2>Remarques</h2>
 Assurez-vous d'avoir Python installé sur votre machine pour exécuter le jeu.
