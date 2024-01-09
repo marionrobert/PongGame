@@ -1,6 +1,6 @@
 # Pong Game
 
-Ce projet consiste en un jeu Pong développé en Python utilisant le module Turtle pour la création de l'interface graphique.
+Ce projet consiste en un jeu Pong développé en Python utilisant le module Turtle et la programmation orientée objet.
 
 ## Présentation du jeu
 
