@@ -15,6 +15,10 @@ Le jeu Pong est un jeu classique où deux joueurs contrôlent des raquettes pour
 - `ball.py`: Le fichier contenant la classe Ball qui représente la balle du jeu et définit ses mouvements et rebonds.
 - `paddle.py`: Ce fichier contient la classe Paddle qui définit les raquettes des joueurs et leurs déplacements.
 
+### Installation et configuration  :
+- Python 3.9.6
+- La librairie Turtle étant intégrée, aucune installation n'est requise.
+
 ## Comment jouer ?
 
 Exécutez le fichier `main.py` pour démarrer le jeu.
