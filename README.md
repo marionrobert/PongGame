@@ -11,6 +11,13 @@ Le jeu Pong est un jeu classique où deux joueurs contrôlent des raquettes pour
 ### Fichiers inclus :
 
 - `main.py`: Le fichier principal du jeu qui initialise l'interface graphique, crée les éléments du jeu (paddles, balle, score) et gère la logique du jeu.
+- Vous pouvez choisir les touches cont^rolant le déplaceement des deux jours en modifiant le slignes de code ci-dessous:
+```python
+screen.onkeypress(fun=player_right.move_up, key="Up")
+screen.onkeypress(fun=player_right.move_down, key="Down")
+screen.onkeypress(fun=player_left .move_up, key="z")
+screen.onkeypress(fun=player_left .move_down, key="q")
+```
 - `scoreboard.py`: Ce fichier définit la classe Scoreboard pour afficher et mettre à jour les scores des joueurs ainsi que le message de fin de partie.
 - `ball.py`: Le fichier contenant la classe Ball qui représente la balle du jeu et définit ses mouvements et rebonds.
 - `paddle.py`: Ce fichier contient la classe Paddle qui définit les raquettes des joueurs et leurs déplacements.
